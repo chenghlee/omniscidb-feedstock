@@ -28,6 +28,11 @@ build:
   number: {{ number }}
   skip: true  # [cuda_compiler_version not in (undefined, "None", "11.0")]
 
+requirements:
+  build:
+    - patch     # [unix]
+    - m2-patch  # [win]
+
 outputs:
 
   - name: omniscidb-common
